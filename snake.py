@@ -28,7 +28,7 @@ class Snake:
             self.body(tail)
         
 
-    def change_vektor(self):
+    def change_vektor(self, dir):
         return
     
     def time(self):

@@ -1,6 +1,16 @@
 from collections import deque
+import keyboard
 
-a = deque([1,2,3,4,5])
+def check(event):
+    print(event.name)
+
+a = keyboard.on_press(check)
+
+
+keyboard.wait('esc')
+
+
+'''a = deque([1,2,3,4,5])
 a.pop()
 a.popleft()
 print(a)
@@ -10,4 +20,4 @@ b = [1,1]
 
 zip(a, b)
 
-print(a)
+print(a) '''
