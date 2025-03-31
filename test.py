@@ -1,4 +1,4 @@
-from collections import deque
+'''from collections import deque
 import keyboard
 
 def check(event):
@@ -7,7 +7,7 @@ def check(event):
 a = keyboard.on_press(check)
 
 
-keyboard.wait('esc')
+keyboard.wait('esc')'''
 
 
 '''a = deque([1,2,3,4,5])
@@ -21,3 +21,7 @@ b = [1,1]
 zip(a, b)
 
 print(a) '''
+
+
+for i in range(2):
+    print(i)

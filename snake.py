@@ -7,7 +7,7 @@ class Snake:
     left_vektor = [-1, 0]
     bottom_vektor = [0, 1]
     upper_vektor = [0, -1]
-    current_vektor = right_vektor
+    current_vektor = [0, 1]
 
     def __init__(self, field:list):
         self.field = field
@@ -29,6 +29,16 @@ class Snake:
         
 
     def change_vektor(self, dir):
+        if Snake.current_vektor == dir:
+            print('stop')
+            return
+        temp = Snake.current_vektor
+        for i in range(2):
+            temp[i] += Snake.current_vektor[i]
+
+        
+        Snake.current_vektor = dir
+        print(dir, temp, Snake.current_vektor)
         return
     
     def time(self):
