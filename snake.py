@@ -1,5 +1,6 @@
 from collections import deque
 from field import chank
+from tkinter import Tk
 
 class Snake:
     length = deque()
@@ -15,11 +16,16 @@ class Snake:
 
 
     def respawn(self, one: chank, two: chank, third: chank):
-        Snake.length.append([self.body(one), self.body(two), self.body(third)])
+        Snake.length.append(self.body(one))
+        Snake.length.append(self.body(two))
+        Snake.length.append(self.body(third))
     
     def move(self):
-        head = Snake.length[2]
+        #print(Snake.length)
+        head = Snake.length[-1]
+        #print(head)
         next = self.field[head.cord[0] + Snake.current_vektor[0]][head.cord[1] + Snake.current_vektor[1]]
+        print(next)
         if next.colision == True:
             return False
         else:
@@ -41,7 +47,9 @@ class Snake:
         print(dir, temp, Snake.current_vektor)
         return
     
-    def time(self):
+
+    a = ''
+    def time(root: Tk):
         return
     
     def body(self, part: chank):
