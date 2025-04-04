@@ -21,7 +21,6 @@ b = [1,1]
 zip(a, b)
 
 print(a) '''
-
-
-for i in range(2):
-    print(i)
+from random import choice
+l = [1,2,3,4,5,7,3]
+print(choice(l))
